@@ -211,7 +211,7 @@
                                                                 <asp:SqlDataSource ID="dsParty" runat="server" ConnectionString="<%$ ConnectionStrings:CSMSysConnection %>" 
                                                                     SelectCommand="SELECT ROW_NUMBER() OVER (ORDER BY ip.PartyID) As SlNo, ip.PartyID, ip.PartyType, ip.PartyCode, ip.PartyName, ip.ContactNo, /*ip.Address,*/ ip.DistrictID, ad.DistrictName
                                                                         FROM INVParty AS ip INNER JOIN ADMDistrict AS ad ON ip.DistrictID = ad.DistrictID" 
-                                                                        FilterExpression="PartyName LIKE '%{0}%' OR ContactNo LIKE '{1}%'">
+                                                                        FilterExpression="PartyName LIKE '%{0}%' OR ContactNo LIKE '%{1}%'">
                                                                     <FilterParameters>
                                                                         <asp:QueryStringParameter Name="PartyName" QueryStringField="PartyName" />
                                                                         <asp:QueryStringParameter Name="ContactNo" QueryStringField="ContactNo" />

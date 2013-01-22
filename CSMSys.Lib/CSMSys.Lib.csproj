@@ -57,6 +57,7 @@
     <Compile Include="DataAccessLayer\Implementations\CountryDAOLinq.cs" />
     <Compile Include="DataAccessLayer\Implementations\DistrictDAOLinq.cs" />
     <Compile Include="DataAccessLayer\Implementations\DivisionDAOLinq.cs" />
+    <Compile Include="DataAccessLayer\Implementations\LoadingDAOLinq.cs" />
     <Compile Include="DataAccessLayer\Implementations\PartyDAOLinq.cs" />
     <Compile Include="DataAccessLayer\Implementations\RegistrationDAOLinq.cs" />
     <Compile Include="DataAccessLayer\Implementations\SerialDAOLinq.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="DataAccessLayer\Interfaces\ICountryDAO.cs" />
     <Compile Include="DataAccessLayer\Interfaces\IDistrictDAO.cs" />
     <Compile Include="DataAccessLayer\Interfaces\IDivisionDAO.cs" />
+    <Compile Include="DataAccessLayer\Interfaces\ILoadingDAO.cs" />
     <Compile Include="DataAccessLayer\Interfaces\IPartyDAO.cs" />
     <Compile Include="DataAccessLayer\Interfaces\IRegistrationDAO.cs" />
     <Compile Include="DataAccessLayer\Interfaces\IRepository.cs" />
@@ -75,9 +77,13 @@
     <Compile Include="Manager\Administration\Application\DistrictManager.cs" />
     <Compile Include="Manager\Administration\Application\DivisionManager.cs" />
     <Compile Include="Manager\Administration\Application\UpazilaPSManager.cs" />
+    <Compile Include="Manager\INV\LoadManager.cs" />
     <Compile Include="Manager\INV\PartyManager.cs" />
     <Compile Include="Manager\INV\SerialManager.cs" />
     <Compile Include="Manager\SRV\RegistrationManager.cs" />
+    <Compile Include="Model\CSMSys.cs">
+      <DependentUpon>CSMSys.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Model\CSMSys.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

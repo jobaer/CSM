@@ -16,6 +16,7 @@ namespace CSMSys.Web.Controls.INV
     public partial class Relocate : System.Web.UI.Page
     {
         #region Private Properties
+        private INVStockLoading _Loading;
         private enum UIMODE
         {
             NEW,
@@ -50,7 +51,7 @@ namespace CSMSys.Web.Controls.INV
             }
         }
 
-        //private INVParty _Party;
+        //private INVParty _Loading;
         ComboData _ComboData = new ComboData();
         #endregion
         protected void Page_Load(object sender, EventArgs e)
@@ -109,23 +110,23 @@ namespace CSMSys.Web.Controls.INV
         {
             if (intPartyID > 0)
             {
-                //_Party = new PartyManager().GetPartyByID(intPartyID);
+                //_Loading = new PartyManager().GetPartyByID(intPartyID);
 
-                //txtCode.Text = _Party.PartyCode;
-                //txtName.Text = _Party.PartyName;
-                //txtFather.Text = _Party.FatherName;
-                //ddlType.SelectedValue = _Party.PartyType;
-                //txtContactNo.Text = _Party.ContactNo;
-                //ddlGender.SelectedValue = _Party.Gender;
-                //ddlReligion.SelectedValue = _Party.Religion;
+                //txtCode.Text = _Loading.PartyCode;
+                //txtName.Text = _Loading.PartyName;
+                //txtFather.Text = _Loading.FatherName;
+                //ddlType.SelectedValue = _Loading.PartyType;
+                //txtContactNo.Text = _Loading.ContactNo;
+                //ddlGender.SelectedValue = _Loading.Gender;
+                //ddlReligion.SelectedValue = _Loading.Religion;
 
-                //txtVillage.Text = _Party.AreaVillageName;
-                //txtPO.Text = _Party.AreaPOName;
-                //ddlDistrict.SelectedValue = _Party.DistrictID.ToString();
-                //ddlUpazila.SelectedValue = _Party.UpazilaPSID.ToString();
-                //txtTel.Text = _Party.Tel;
-                //txtCell.Text = _Party.Cell;
-                //txtEmail.Text = _Party.Email;
+                //txtVillage.Text = _Loading.AreaVillageName;
+                //txtPO.Text = _Loading.AreaPOName;
+                //ddlDistrict.SelectedValue = _Loading.DistrictID.ToString();
+                //ddlUpazila.SelectedValue = _Loading.UpazilaPSID.ToString();
+                //txtTel.Text = _Loading.Tel;
+                //txtCell.Text = _Loading.Cell;
+                //txtEmail.Text = _Loading.Email;
             }
         }
         #endregion
@@ -151,11 +152,39 @@ namespace CSMSys.Web.Controls.INV
         }
         private void saveloc()
         {
-            if (new PartyManager().SaveParty(FormToObject(PartyID)))
+            if (new LoadManager().SaveLocation(FormToObject(LocationID)))
             {
                 ClearForm();
             }
         }
+        private INVStockLoading FormToObject(int id)
+        {
+            if (id <= 0)
+            {
+                _Loading = new INVStockLoading();
+
+                //_Loading.CreatedBy = WebCommonUtility.GetCSMSysUserKey();
+                //_Loading.CreatedDate = System.DateTime.Now;
+            }
+
+            //_Loading.ModifiedBy = WebCommonUtility.GetCSMSysUserKey();
+            //_Loading.ModifiedDate = System.DateTime.Now;
+
+            _Loading.LoadingID = id;
+            _Loading.ChamberNo = txtchamber.Text;
+            _Loading.Floor = txtfloor.Text;
+            _Loading.Pocket = txtpocket.Text; 
+            _Loading.Line = txtlineno.Text;
+
+
+            _Loading.Remarks = txtremarks.Text;
+
+            //_Loading.PartyCodeName = txtCode.Text + " - " + txtName.Text;
+            //_Loading.IsActive = true;
+
+            return _Loading;
+        }
+
         #endregion
     }
 }
