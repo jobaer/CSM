@@ -129,5 +129,33 @@ namespace CSMSys.Web.Controls.INV
             }
         }
         #endregion
+        #region Methods for SAVE
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if ((UIMode == UIMODE.NEW) || (UIMode == UIMODE.EDIT))
+                {
+                    if (!checkValidity()) return;
+
+                    saveloc();
+                }
+                ScriptManager.RegisterStartupScript(this, GetType(), "onload", "onSuccess();", true);
+                MultiViewParty.ActiveViewIndex = 1;
+            }
+            catch
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "onload", "onError();", true);
+                MultiViewParty.ActiveViewIndex = 2;
+            }
+        }
+        private void saveloc()
+        {
+            if (new PartyManager().SaveParty(FormToObject(PartyID)))
+            {
+                ClearForm();
+            }
+        }
+        #endregion
     }
 }

@@ -74,7 +74,7 @@
       <Column Name="SerialDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Serial" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Bags" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SerialNo" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="SerialNo" Type="System.String" DbType="NVarChar(64)" CanBeNull="false" />
       <Column Name="PartyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="PartyCode" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
       <Column Name="Remarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
@@ -83,6 +83,7 @@
       <Column Name="ModifiedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="INVStockSerial_SRVRegistration" Member="SRVRegistrations" ThisKey="SerialID" OtherKey="SerialID" Type="SRVRegistration" />
+      <Association Name="INVStockSerial_INVStockLoading" Member="INVStockLoadings" ThisKey="SerialNo" OtherKey="SerialNo" Type="INVStockLoading" />
       <Association Name="INVParty_INVStockSerial" Member="INVParty" ThisKey="PartyID" OtherKey="PartyID" Type="INVParty" IsForeignKey="true" />
     </Type>
   </Table>
@@ -282,6 +283,21 @@
       <Column Name="ModifiedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
       <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="INVStockSerial_SRVRegistration" Member="INVStockSerial" ThisKey="SerialID" OtherKey="SerialID" Type="INVStockSerial" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INVStockSerial" Member="INVStockLoadings">
+    <Type Name="INVStockLoading">
+      <Column Name="SerialID" Member="LoadingID" Storage="_SerialID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Serial" Member="SerialID" Storage="_Serial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Bags" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SerialNo" Type="System.String" DbType="NVarChar(64)" CanBeNull="false" />
+      <Column Name="PartyCode" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ChamberNo" Type="System.String" DbType="NVarChar(128)" CanBeNull="false" />
+      <Column Name="Floor" Type="System.String" DbType="NVarChar(128)" CanBeNull="false" />
+      <Column Name="Pocket" Type="System.String" DbType="NVarChar(128)" CanBeNull="false" />
+      <Column Name="Line" Type="System.String" DbType="NVarChar(128)" CanBeNull="false" />
+      <Association Name="INVStockSerial_INVStockLoading" Member="INVStockSerial" ThisKey="SerialNo" OtherKey="SerialNo" Type="INVStockSerial" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
