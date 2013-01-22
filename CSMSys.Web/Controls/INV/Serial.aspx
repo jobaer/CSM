@@ -182,7 +182,7 @@
                                                                         </asp:TemplateField>
                                                                         <asp:TemplateField HeaderText="Contact No" HeaderStyle-HorizontalAlign="Left" ItemStyle-HorizontalAlign="Left" ItemStyle-Width="15%">
                                                                             <ItemTemplate>
-                                                                                <asp:Label ID="lblContactNo" Text='<%# Eval("ContactNo") %>' runat="server" HorizontalAlign="Left" />
+                                                                                <asp:Label ID="lblContactNo" Text='<%# HighlightText(Eval("ContactNo").ToString()) %>' runat="server" HorizontalAlign="Left" />
                                                                             </ItemTemplate>
                                                                         </asp:TemplateField>
                                                                         <%--<asp:TemplateField HeaderText="Address" HeaderStyle-HorizontalAlign="Left" ItemStyle-HorizontalAlign="Left" ItemStyle-Width="15%">

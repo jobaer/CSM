@@ -26,7 +26,7 @@ namespace CSMSys.Lib.Manager.INV
         /// Get all Party from Party table 
         /// </summary>
         /// <returns></returns>
-        public IList<INVStockLoading> GetAllParty()
+        public IList<INVStockLoading> GetAllLoading()
         {
             try
             {

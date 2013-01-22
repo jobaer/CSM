@@ -51,32 +51,7 @@ namespace CSMSys.Lib.DataAccessLayer.Implementations
             }
         }
 
-        public IList<INVStockSerial> GetPartyBySerial(string serialNo)
-        {
-            try
-            {
-                string whereClause = string.Empty;
-                string queryTable = "INVStockSerial";
-
-                DataContext dc = new DataContext(ConfigurationManager.ConnectionStrings["CSMSysConnection"].ConnectionString);
-
-                string strSQL = "SELECT * FROM " + queryTable;
-
-                if (!string.IsNullOrEmpty(serialNo))
-                {
-                    whereClause += " WHERE SerialNo = '" + serialNo + "' ";
-                }
-
-                strSQL += whereClause;
-
-                return dc.ExecuteQuery<INVStockSerial>(@strSQL).ToList();
-            }
-            catch (Exception ex)
-            {
-                _Logger.Error(ex);
-                return null;
-            }
-        }
+        
         /// <summary>
         /// DA method to search object by params
         /// </summary>
