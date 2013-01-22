@@ -1,0 +1,13 @@
+E:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\CSMSys\CSMSys\CSMSys.Web\bin\CSMSys.Web.dll
+E:\CSMSys\CSMSys\CSMSys.Web\bin\CSMSys.Web.pdb
+E:\CSMSys\CSMSys\CSMSys.Web\bin\CSMSys.Lib.dll
+E:\CSMSys\CSMSys\CSMSys.Web\bin\CSMSys.Lib.pdb
+E:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.dll
+E:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.pdb
+E:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\GenerateResource.read.1.tlog
+E:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\GenerateResource.write.1.tlog
+E:\CSMSys\CSMSys\CSMSys.Web\bin\bn-BD\CSMSys.Web.resources.dll
+E:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\bn-BD\CSMSys.Web.resources.dll
+E:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.Pages.Strings.resources
+E:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.Pages.Strings.bn-BD.resources

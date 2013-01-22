@@ -1,0 +1,6 @@
+E:\CSMSys\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.dll.config
+E:\CSMSys\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.dll
+E:\CSMSys\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.pdb
+E:\CSMSys\CSMSys\CSMSys.Lib\obj\Debug\ResolveAssemblyReference.cache
+E:\CSMSys\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.dll
+E:\CSMSys\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.pdb
