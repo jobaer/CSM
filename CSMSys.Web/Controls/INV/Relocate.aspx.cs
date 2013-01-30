@@ -169,7 +169,7 @@ namespace CSMSys.Web.Controls.INV
 
             //_Loading.ModifiedBy = WebCommonUtility.GetCSMSysUserKey();
             //_Loading.ModifiedDate = System.DateTime.Now;
-
+                       
             _Loading.LoadingID = id;
             _Loading.ChamberNo = txtchamber.Text;
             _Loading.Floor = txtfloor.Text;

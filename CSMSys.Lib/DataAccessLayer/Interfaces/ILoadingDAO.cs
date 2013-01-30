@@ -9,6 +9,6 @@ namespace CSMSys.Lib.DataAccessLayer.Interfaces
 {
     public interface ILoadingDAO : IRepository<INVStockLoading>
     {
-       
+        IList<INVStockSerial> GetPartyBySerial(string serialNo);
     }
 }

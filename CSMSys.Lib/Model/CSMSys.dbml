@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CSMSys" Class="CSMSysDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=VSB-PC;Initial Catalog=CSMSys;User ID=sa" SettingsObjectName="CSMSys.Lib.Properties.Settings" SettingsPropertyName="CSMSysConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=VERTEXSRV;Initial Catalog=CSMSys;User ID=sa" SettingsObjectName="CSMSys.Lib.Properties.Settings" SettingsPropertyName="CSMSysConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ADMCountry" Member="ADMCountries">
     <Type Name="ADMCountry">
       <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -298,6 +298,39 @@
       <Column Name="Pocket" Type="System.String" DbType="NVarChar(128)" CanBeNull="false" />
       <Column Name="Line" Type="System.String" DbType="NVarChar(128)" CanBeNull="false" />
       <Association Name="INVStockSerial_INVStockLoading" Member="INVStockSerial" ThisKey="SerialNo" OtherKey="SerialNo" Type="INVStockSerial" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INVItemType" Member="INVItemTypes">
+    <Type Name="INVItemType">
+      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeCode" Type="System.String" DbType="NVarChar(48)" CanBeNull="true" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INVBagFair" Member="INVBagFairs">
+    <Type Name="INVBagFair">
+      <Column Name="FairID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BagWeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BagUOM" Type="System.String" DbType="NVarChar(32)" CanBeNull="true" />
+      <Column Name="BagFair" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INVItemDetail" Member="INVItemDetails">
+    <Type Name="INVItemDetail">
+      <Column Name="RegistrationID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="BagNo" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="BagWeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BagFair" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalFair" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Advance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ItemDetailID" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemTypeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

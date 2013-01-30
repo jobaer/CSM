@@ -48,6 +48,7 @@ namespace CSMSys.Lib.Manager.INV
             return _PartyDAOLinq.PickByID(id);
         }
 
+
         /// <summary>
         /// Method to save (add/edit) party object
         /// </summary>

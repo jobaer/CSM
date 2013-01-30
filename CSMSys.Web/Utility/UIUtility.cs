@@ -8,6 +8,7 @@ using CSMSys.Lib.Model;
 using CSMSys.Lib.Utility;
 using CSMSys.Lib.Manager.Administration.Application;
 using CSMSys.Lib.Manager.INV;
+using CSMSys.Lib.Manager.SRV;
 using Newtonsoft.Json;
 
 namespace CSMSys.Web.Utility
@@ -97,6 +98,61 @@ namespace CSMSys.Web.Utility
                 ddl.Items.Insert(0, new ListItem("   <-- Select District -->", "-1"));
             }
         }
+
+        #region DDL Type
+        public static void BindTypeDDL(DropDownList ddl, int TypeID, bool defaultDisabled)
+        {
+            IList<INVItemType> typeName;
+
+            
+                typeName = new ItemTypeManager(true).GetAllItemType();
+                //district = new List<ADMDistrict>();
+           
+
+            if (typeName != null)
+            {
+                ddl.Items.Clear();
+                ddl.DataSource = typeName;
+                ddl.DataTextField = "TypeName";
+                ddl.DataValueField = "TypeID";
+                ddl.DataBind();
+                ddl.Items.Insert(0, new ListItem("   <-- Select Type -->", "-1"));
+            }
+        }
+        #endregion
+
+        #region DDL BagFair
+        public static void BindBagDDL(DropDownList ddl, int FairID, bool defaultDisabled)
+        {
+            IList<INVBagFair> bagFair;
+
+            if (FairID > 0)
+            {
+                bagFair = new BagManager(true).GetByFairID(FairID); 
+            }
+            else
+            {
+                bagFair = new BagManager(true).GetAllBagWeight();
+                //district = new List<ADMDistrict>();
+            }
+
+           // typeName = new BagManager(true).GetAllBagWeight();
+            //district = new List<ADMDistrict>();
+
+
+            if (bagFair != null)
+            {
+                ddl.Items.Clear();
+                ddl.DataSource = bagFair;
+                ddl.DataTextField = "BagWeight";
+                ddl.DataValueField = "FairID";
+                ddl.DataBind();
+                ddl.Items.Insert(0, new ListItem("   <-- Select Weight -->", "-1"));
+            }
+        }
+        #endregion
+
+
 
         public static void BindUpazillaPSDDL(DropDownList ddl, int districtID, bool defaultDisabled)
         {

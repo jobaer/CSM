@@ -50,6 +50,10 @@
         <siteMapNode url="" title="Loan Collection" description="Loan Collection" roles="Site Administrator, Super Administrator, Administrator, Accountant" />
         <siteMapNode url="" title="Loan Disburse" description="Loan Disburse" roles="Site Administrator, Super Administrator, Administrator, Accountant" />
       </siteMapNode>
+      <siteMapNode url="" title="Reports" description="Reports" roles="Site Administrator, Super Administrator, Administrator, Accountant" >
+        <siteMapNode url="~\Reports\AgreementReport.aspx" title="Agreement Report" description="Agreement Report" roles="Site Administrator, Super Administrator, Administrator, Accountant" />
+        <siteMapNode url="~\Reports\Delivery\DeliveryReport.aspx" title="Delivery Reports" description="Delivery Reports" roles="Site Administrator, Super Administrator, Administrator, Accountant" />
+      </siteMapNode>
       <siteMapNode url="" title="Delivery" description="Delivery" roles="Site Administrator, Super Administrator, Administrator, Accountant"/>
     </siteMapNode>
     <siteMapNode url="" title="Booking" description="Booking" roles="Site Administrator, Super Administrator, Administrator, Accountant" >

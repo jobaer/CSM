@@ -93,10 +93,19 @@ namespace CSMSys.Lib.Model
     partial void InsertINVStockLoading(INVStockLoading instance);
     partial void UpdateINVStockLoading(INVStockLoading instance);
     partial void DeleteINVStockLoading(INVStockLoading instance);
+    partial void InsertINVItemType(INVItemType instance);
+    partial void UpdateINVItemType(INVItemType instance);
+    partial void DeleteINVItemType(INVItemType instance);
+    partial void InsertINVBagFair(INVBagFair instance);
+    partial void UpdateINVBagFair(INVBagFair instance);
+    partial void DeleteINVBagFair(INVBagFair instance);
+    partial void InsertINVItemDetail(INVItemDetail instance);
+    partial void UpdateINVItemDetail(INVItemDetail instance);
+    partial void DeleteINVItemDetail(INVItemDetail instance);
     #endregion
 		
 		public CSMSysDataContext() : 
-				base(global::CSMSys.Lib.Properties.Settings.Default.CSMSysConnectionString, mappingSource)
+				base(global::CSMSys.Lib.Properties.Settings.Default.CSMSysConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -290,6 +299,30 @@ namespace CSMSys.Lib.Model
 			get
 			{
 				return this.GetTable<INVStockLoading>();
+			}
+		}
+		
+		public System.Data.Linq.Table<INVItemType> INVItemTypes
+		{
+			get
+			{
+				return this.GetTable<INVItemType>();
+			}
+		}
+		
+		public System.Data.Linq.Table<INVBagFair> INVBagFairs
+		{
+			get
+			{
+				return this.GetTable<INVBagFair>();
+			}
+		}
+		
+		public System.Data.Linq.Table<INVItemDetail> INVItemDetails
+		{
+			get
+			{
+				return this.GetTable<INVItemDetail>();
 			}
 		}
 	}
@@ -6683,6 +6716,624 @@ namespace CSMSys.Lib.Model
 						this._SerialNo = default(string);
 					}
 					this.SendPropertyChanged("INVStockSerial");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.INVItemType")]
+	public partial class INVItemType : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _TypeID;
+		
+		private string _TypeCode;
+		
+		private string _TypeName;
+		
+		private string _Description;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTypeIDChanging(int value);
+    partial void OnTypeIDChanged();
+    partial void OnTypeCodeChanging(string value);
+    partial void OnTypeCodeChanged();
+    partial void OnTypeNameChanging(string value);
+    partial void OnTypeNameChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    #endregion
+		
+		public INVItemType()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int TypeID
+		{
+			get
+			{
+				return this._TypeID;
+			}
+			set
+			{
+				if ((this._TypeID != value))
+				{
+					this.OnTypeIDChanging(value);
+					this.SendPropertyChanging();
+					this._TypeID = value;
+					this.SendPropertyChanged("TypeID");
+					this.OnTypeIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeCode", DbType="NVarChar(48)")]
+		public string TypeCode
+		{
+			get
+			{
+				return this._TypeCode;
+			}
+			set
+			{
+				if ((this._TypeCode != value))
+				{
+					this.OnTypeCodeChanging(value);
+					this.SendPropertyChanging();
+					this._TypeCode = value;
+					this.SendPropertyChanged("TypeCode");
+					this.OnTypeCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeName", DbType="NVarChar(128)")]
+		public string TypeName
+		{
+			get
+			{
+				return this._TypeName;
+			}
+			set
+			{
+				if ((this._TypeName != value))
+				{
+					this.OnTypeNameChanging(value);
+					this.SendPropertyChanging();
+					this._TypeName = value;
+					this.SendPropertyChanged("TypeName");
+					this.OnTypeNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.INVBagFair")]
+	public partial class INVBagFair : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _FairID;
+		
+		private System.Nullable<double> _BagWeight;
+		
+		private string _BagUOM;
+		
+		private System.Nullable<double> _BagFair;
+		
+		private System.Nullable<System.Guid> _CreatedBy;
+		
+		private System.Nullable<System.DateTime> _CreatedDate;
+		
+		private System.Nullable<System.Guid> _ModifiedBy;
+		
+		private System.Nullable<System.DateTime> _ModifiedDate;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnFairIDChanging(int value);
+    partial void OnFairIDChanged();
+    partial void OnBagWeightChanging(System.Nullable<double> value);
+    partial void OnBagWeightChanged();
+    partial void OnBagUOMChanging(string value);
+    partial void OnBagUOMChanged();
+    partial void OnBagFairChanging(System.Nullable<double> value);
+    partial void OnBagFairChanged();
+    partial void OnCreatedByChanging(System.Nullable<System.Guid> value);
+    partial void OnCreatedByChanged();
+    partial void OnCreatedDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedDateChanged();
+    partial void OnModifiedByChanging(System.Nullable<System.Guid> value);
+    partial void OnModifiedByChanged();
+    partial void OnModifiedDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnModifiedDateChanged();
+    #endregion
+		
+		public INVBagFair()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FairID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int FairID
+		{
+			get
+			{
+				return this._FairID;
+			}
+			set
+			{
+				if ((this._FairID != value))
+				{
+					this.OnFairIDChanging(value);
+					this.SendPropertyChanging();
+					this._FairID = value;
+					this.SendPropertyChanged("FairID");
+					this.OnFairIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BagWeight", DbType="Float")]
+		public System.Nullable<double> BagWeight
+		{
+			get
+			{
+				return this._BagWeight;
+			}
+			set
+			{
+				if ((this._BagWeight != value))
+				{
+					this.OnBagWeightChanging(value);
+					this.SendPropertyChanging();
+					this._BagWeight = value;
+					this.SendPropertyChanged("BagWeight");
+					this.OnBagWeightChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BagUOM", DbType="NVarChar(32)")]
+		public string BagUOM
+		{
+			get
+			{
+				return this._BagUOM;
+			}
+			set
+			{
+				if ((this._BagUOM != value))
+				{
+					this.OnBagUOMChanging(value);
+					this.SendPropertyChanging();
+					this._BagUOM = value;
+					this.SendPropertyChanged("BagUOM");
+					this.OnBagUOMChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BagFair", DbType="Float")]
+		public System.Nullable<double> BagFair
+		{
+			get
+			{
+				return this._BagFair;
+			}
+			set
+			{
+				if ((this._BagFair != value))
+				{
+					this.OnBagFairChanging(value);
+					this.SendPropertyChanging();
+					this._BagFair = value;
+					this.SendPropertyChanged("BagFair");
+					this.OnBagFairChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedBy", DbType="UniqueIdentifier")]
+		public System.Nullable<System.Guid> CreatedBy
+		{
+			get
+			{
+				return this._CreatedBy;
+			}
+			set
+			{
+				if ((this._CreatedBy != value))
+				{
+					this.OnCreatedByChanging(value);
+					this.SendPropertyChanging();
+					this._CreatedBy = value;
+					this.SendPropertyChanged("CreatedBy");
+					this.OnCreatedByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreatedDate
+		{
+			get
+			{
+				return this._CreatedDate;
+			}
+			set
+			{
+				if ((this._CreatedDate != value))
+				{
+					this.OnCreatedDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreatedDate = value;
+					this.SendPropertyChanged("CreatedDate");
+					this.OnCreatedDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedBy", DbType="UniqueIdentifier")]
+		public System.Nullable<System.Guid> ModifiedBy
+		{
+			get
+			{
+				return this._ModifiedBy;
+			}
+			set
+			{
+				if ((this._ModifiedBy != value))
+				{
+					this.OnModifiedByChanging(value);
+					this.SendPropertyChanging();
+					this._ModifiedBy = value;
+					this.SendPropertyChanged("ModifiedBy");
+					this.OnModifiedByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ModifiedDate
+		{
+			get
+			{
+				return this._ModifiedDate;
+			}
+			set
+			{
+				if ((this._ModifiedDate != value))
+				{
+					this.OnModifiedDateChanging(value);
+					this.SendPropertyChanging();
+					this._ModifiedDate = value;
+					this.SendPropertyChanged("ModifiedDate");
+					this.OnModifiedDateChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.INVItemDetail")]
+	public partial class INVItemDetail : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _RegistrationID;
+		
+		private double _BagNo;
+		
+		private System.Nullable<double> _BagWeight;
+		
+		private System.Nullable<double> _BagFair;
+		
+		private System.Nullable<double> _TotalFair;
+		
+		private System.Nullable<double> _Advance;
+		
+		private string _Remarks;
+		
+		private long _ItemDetailID;
+		
+		private long _ItemTypeID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnRegistrationIDChanging(long value);
+    partial void OnRegistrationIDChanged();
+    partial void OnBagNoChanging(double value);
+    partial void OnBagNoChanged();
+    partial void OnBagWeightChanging(System.Nullable<double> value);
+    partial void OnBagWeightChanged();
+    partial void OnBagFairChanging(System.Nullable<double> value);
+    partial void OnBagFairChanged();
+    partial void OnTotalFairChanging(System.Nullable<double> value);
+    partial void OnTotalFairChanged();
+    partial void OnAdvanceChanging(System.Nullable<double> value);
+    partial void OnAdvanceChanged();
+    partial void OnRemarksChanging(string value);
+    partial void OnRemarksChanged();
+    partial void OnItemDetailIDChanging(long value);
+    partial void OnItemDetailIDChanged();
+    partial void OnItemTypeIDChanging(long value);
+    partial void OnItemTypeIDChanged();
+    #endregion
+		
+		public INVItemDetail()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RegistrationID", DbType="BigInt NOT NULL")]
+		public long RegistrationID
+		{
+			get
+			{
+				return this._RegistrationID;
+			}
+			set
+			{
+				if ((this._RegistrationID != value))
+				{
+					this.OnRegistrationIDChanging(value);
+					this.SendPropertyChanging();
+					this._RegistrationID = value;
+					this.SendPropertyChanged("RegistrationID");
+					this.OnRegistrationIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BagNo", DbType="Float NOT NULL")]
+		public double BagNo
+		{
+			get
+			{
+				return this._BagNo;
+			}
+			set
+			{
+				if ((this._BagNo != value))
+				{
+					this.OnBagNoChanging(value);
+					this.SendPropertyChanging();
+					this._BagNo = value;
+					this.SendPropertyChanged("BagNo");
+					this.OnBagNoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BagWeight", DbType="Float")]
+		public System.Nullable<double> BagWeight
+		{
+			get
+			{
+				return this._BagWeight;
+			}
+			set
+			{
+				if ((this._BagWeight != value))
+				{
+					this.OnBagWeightChanging(value);
+					this.SendPropertyChanging();
+					this._BagWeight = value;
+					this.SendPropertyChanged("BagWeight");
+					this.OnBagWeightChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BagFair", DbType="Float")]
+		public System.Nullable<double> BagFair
+		{
+			get
+			{
+				return this._BagFair;
+			}
+			set
+			{
+				if ((this._BagFair != value))
+				{
+					this.OnBagFairChanging(value);
+					this.SendPropertyChanging();
+					this._BagFair = value;
+					this.SendPropertyChanged("BagFair");
+					this.OnBagFairChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalFair", DbType="Float")]
+		public System.Nullable<double> TotalFair
+		{
+			get
+			{
+				return this._TotalFair;
+			}
+			set
+			{
+				if ((this._TotalFair != value))
+				{
+					this.OnTotalFairChanging(value);
+					this.SendPropertyChanging();
+					this._TotalFair = value;
+					this.SendPropertyChanged("TotalFair");
+					this.OnTotalFairChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Advance", DbType="Float")]
+		public System.Nullable<double> Advance
+		{
+			get
+			{
+				return this._Advance;
+			}
+			set
+			{
+				if ((this._Advance != value))
+				{
+					this.OnAdvanceChanging(value);
+					this.SendPropertyChanging();
+					this._Advance = value;
+					this.SendPropertyChanged("Advance");
+					this.OnAdvanceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Remarks", DbType="NVarChar(128)")]
+		public string Remarks
+		{
+			get
+			{
+				return this._Remarks;
+			}
+			set
+			{
+				if ((this._Remarks != value))
+				{
+					this.OnRemarksChanging(value);
+					this.SendPropertyChanging();
+					this._Remarks = value;
+					this.SendPropertyChanged("Remarks");
+					this.OnRemarksChanged();
+				}
+			}
+		}
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_ItemDetailID", DbType = "BigInt NOT NULL", AutoSync = AutoSync.OnInsert, IsPrimaryKey = true, IsDbGenerated=true)]
+		public long ItemDetailID
+		{
+			get
+			{
+				return this._ItemDetailID;
+			}
+			set
+			{
+				if ((this._ItemDetailID != value))
+				{
+					this.OnItemDetailIDChanging(value);
+					this.SendPropertyChanging();
+					this._ItemDetailID = value;
+					this.SendPropertyChanged("ItemDetailID");
+					this.OnItemDetailIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ItemTypeID", DbType="BigInt NOT NULL")]
+		public long ItemTypeID
+		{
+			get
+			{
+				return this._ItemTypeID;
+			}
+			set
+			{
+				if ((this._ItemTypeID != value))
+				{
+					this.OnItemTypeIDChanging(value);
+					this.SendPropertyChanging();
+					this._ItemTypeID = value;
+					this.SendPropertyChanged("ItemTypeID");
+					this.OnItemTypeIDChanged();
 				}
 			}
 		}

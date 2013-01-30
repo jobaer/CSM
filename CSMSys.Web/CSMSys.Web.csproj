@@ -35,6 +35,12 @@
     <Reference Include="AjaxControlToolkit">
       <HintPath>..\..\..\SMMS\SMMS.Web\bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\SMMS\SMMS.Web\bin\log4net.dll</HintPath>
@@ -585,8 +591,8 @@
     <Content Include="Pages\Administration\Application\ItemTypeSetup.aspx" />
     <Content Include="Pages\Administration\Application\UpazilaPSSetup.aspx" />
     <Content Include="Pages\Administration\Application\WebForm1.aspx" />
-    <Content Include="Pages\Administration\User\RoleManagement.aspx" />
-    <Content Include="Pages\Administration\User\UserManagement.aspx" />
+    <Content Include="Pages\Administration\Application\User\RoleManagement.aspx" />
+    <Content Include="Pages\Administration\Application\User\UserManagement.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Controls\SRV\ErrorHandlers\SMMSError.aspx" />
     <Content Include="Pages\HRM\Employee\EmployeeList.aspx" />
@@ -594,6 +600,12 @@
     <Content Include="Pages\INV\PartySetup.aspx" />
     <Content Include="Pages\INV\StockSerial.aspx" />
     <Content Include="Pages\Service\Registration.aspx" />
+    <Content Include="Reports\AgreementReport.aspx" />
+    <Content Include="Reports\Delivery\DeliveryReport.aspx" />
+    <Content Include="Reports\Delivery\DeliveryReportViewer.aspx" />
+    <Content Include="Reports\Images\Header.JPG" />
+    <Content Include="Reports\LoanDisburseReport\LoanReportViwer.aspx" />
+    <Content Include="Reports\TestReport.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -755,18 +767,18 @@
     <Compile Include="Pages\Administration\Application\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Administration\User\RoleManagement.aspx.cs">
+    <Compile Include="Pages\Administration\Application\User\RoleManagement.aspx.cs">
       <DependentUpon>RoleManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Administration\User\RoleManagement.aspx.designer.cs">
+    <Compile Include="Pages\Administration\Application\User\RoleManagement.aspx.designer.cs">
       <DependentUpon>RoleManagement.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Administration\User\UserManagement.aspx.cs">
+    <Compile Include="Pages\Administration\Application\User\UserManagement.aspx.cs">
       <DependentUpon>UserManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Administration\User\UserManagement.aspx.designer.cs">
+    <Compile Include="Pages\Administration\Application\User\UserManagement.aspx.designer.cs">
       <DependentUpon>UserManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Default.aspx.cs">
@@ -824,6 +836,69 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\AgreementReport.aspx.cs">
+      <DependentUpon>AgreementReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\AgreementReport.aspx.designer.cs">
+      <DependentUpon>AgreementReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Delivery\DeliveryReport.aspx.cs">
+      <DependentUpon>DeliveryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Delivery\DeliveryReport.aspx.designer.cs">
+      <DependentUpon>DeliveryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Delivery\DeliveryReportViewer.aspx.cs">
+      <DependentUpon>DeliveryReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Delivery\DeliveryReportViewer.aspx.designer.cs">
+      <DependentUpon>DeliveryReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Delivery\dsDeliveryReport.Designer.cs">
+      <DependentUpon>dsDeliveryReport.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Delivery\rptDeliveryReport.cs">
+      <DependentUpon>rptDeliveryReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\dsAgreementReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAgreementReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LoanDisburseReport\LoanReportViwer.aspx.cs">
+      <DependentUpon>LoanReportViwer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\LoanDisburseReport\LoanReportViwer.aspx.designer.cs">
+      <DependentUpon>LoanReportViwer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LoanDisburseReport\rptLoanReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLoanReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptAgreementReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAgreementReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TestReport.aspx.cs">
+      <DependentUpon>TestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\TestReport.aspx.designer.cs">
+      <DependentUpon>TestReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Utility\CustomXmlSiteMapProvider.cs" />
     <Compile Include="Utility\SessionData.cs" />
     <Compile Include="Utility\SiteCulture.cs" />
@@ -837,7 +912,7 @@
     <Folder Include="Handlers\" />
     <Folder Include="Pages\ACC\" />
     <Folder Include="Pages\Others\" />
-    <Folder Include="Reports\" />
+    <Folder Include="Reports\FinalDeliveryReport\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
@@ -863,6 +938,28 @@
     <Content Include="Web_BN.sitemap">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Reports\Delivery\dsDeliveryReport.xsc">
+      <DependentUpon>dsDeliveryReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Delivery\dsDeliveryReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDeliveryReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\Delivery\dsDeliveryReport.xss">
+      <DependentUpon>dsDeliveryReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dsAgreementReport.xsc">
+      <DependentUpon>dsAgreementReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\dsAgreementReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAgreementReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\dsAgreementReport.xss">
+      <DependentUpon>dsAgreementReport.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\Strings.bn-BD.resx" />
@@ -872,6 +969,21 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Delivery\rptDeliveryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDeliveryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LoanDisburseReport\rptLoanReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLoanReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptAgreementReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAgreementReport.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

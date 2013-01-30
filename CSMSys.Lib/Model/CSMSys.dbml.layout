@@ -46,14 +46,14 @@
         <classShapeMoniker Id="b14e4a0a-067d-4483-b61a-8472b1add9f3" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(18.09375 : 4); (18.09375 : 1.84375); (20 : 1.84375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(18.09375 : 4); (18.09375 : 1.84375); (20 : 1.84375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CSMSysDataContext/ADMDistrict/ADMDistrict_ADMUpazilaPS" />
       <nodes>
         <classShapeMoniker Id="b14e4a0a-067d-4483-b61a-8472b1add9f3" />
         <classShapeMoniker Id="0d7fbe98-acdc-4a39-8a6a-bb61f816df6e" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(22 : 2.40625); (22.75 : 2.40625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(22 : 2.40625); (22.75 : 2.40625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CSMSysDataContext/ADMUpazilaPS/ADMUpazilaPS_ADMAreaPO" />
       <nodes>
         <classShapeMoniker Id="0d7fbe98-acdc-4a39-8a6a-bb61f816df6e" />
@@ -202,7 +202,7 @@
         <classShapeMoniker Id="dfad9ca3-e75a-4127-afad-db06ecdb4682" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.46769230774198 : 10.375); (5.875 : 9.96769230774198); (5.875 : 10.1939925126607); (6.24999999963989 : 9.81899251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.46769230774198 : 10.375); (5.875 : 9.96769230774198); (5.875 : 10.1939925126607); (6.00357443490112 : 10.0654180777596 : JumpStart); (6.12142556509888 : 9.94756694756183 : JumpEnd); (6.24999999963989 : 9.81899251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CSMSysDataContext/aspnet_User/aspnet_User_aspnet_UsersInRole" />
       <nodes>
         <classShapeMoniker Id="5c6bd5d1-659c-41e7-9ebc-74ac103f7da7" />
@@ -221,14 +221,14 @@
         <elementListCompartment Id="32bb0185-a1ad-4b03-a6b7-edd6772e8d60" absoluteBounds="20.015, 4.585, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(24.75 : 2.52005126953125); (25.75 : 2.52005126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(24.75 : 2.52005126953125); (25.75 : 2.52005126953125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CSMSysDataContext/ADMAreaPO/ADMAreaPO_ADMAreaVillage" />
       <nodes>
         <classShapeMoniker Id="ec68bf08-8752-46eb-8a29-c40967639400" />
         <classShapeMoniker Id="4135a224-79ef-4fde-9ef1-5ccba1c036e7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(22 : 7.5232568359375); (22.75 : 7.5232568359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(22 : 7.5232568359375); (22.75 : 7.5232568359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CSMSysDataContext/INVParty/INVParty_INVStockSerial" />
       <nodes>
         <classShapeMoniker Id="45a66c64-da55-4d16-beb3-e1a884674144" />
@@ -248,7 +248,7 @@
         <elementListCompartment Id="7078ad37-7ab2-42f1-8874-5924443036f7" absoluteBounds="8.39, 5.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(23.6874995 : 5.125); (23.6874995 : 4.0401025390625); (21.0833333333333 : 4.0401025390625 : JumpStart); (20.9166666666667 : 4.0401025390625 : JumpEnd); (19.5 : 4.0401025390625); (19.5 : 7.0713520390625); (10.375 : 7.0713520390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(23.6874995 : 5.125); (23.6874995 : 4.0401025390625); (19.5 : 4.0401025390625); (19.5 : 7.0713520390625); (10.375 : 7.0713520390625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CSMSysDataContext/INVStockSerial/INVStockSerial_SRVRegistration" />
       <nodes>
         <classShapeMoniker Id="81a770a0-3f4f-4039-980f-0c3f6cee6f85" />
@@ -261,12 +261,30 @@
         <elementListCompartment Id="67ccfaa5-0d9e-4e98-b09e-75018413b99e" absoluteBounds="25.515, 4.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(24.75 : 6.05370198567708); (25.5 : 6.05370198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(24.75 : 6.05370198567708); (25.5 : 6.05370198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/CSMSysDataContext/INVStockSerial/INVStockSerial_INVStockLoading" />
       <nodes>
         <classShapeMoniker Id="81a770a0-3f4f-4039-980f-0c3f6cee6f85" />
         <classShapeMoniker Id="0c633933-2d23-4aae-be61-03e838662ca0" />
       </nodes>
     </associationConnector>
+    <classShape Id="1b50fd7d-27be-4eaf-b181-78542bf26b7c" absoluteBounds="3.625, 2.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CSMSysDataContext/INVItemType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffc83cac-34ab-4aae-8965-b671479dbdaf" absoluteBounds="3.64, 3.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cad01d73-05d8-474d-be31-6696cd1c33c0" absoluteBounds="6.625, 1.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CSMSysDataContext/INVBagFair" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a5b3cc7a-7c95-4cfb-ad15-a38ac9b8bcae" absoluteBounds="6.64, 1.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b4438361-2e29-48da-8703-c23d8da08b97" absoluteBounds="9, 1, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CSMSysDataContext/INVItemDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="129b2911-af69-4578-8ced-95aafda8c887" absoluteBounds="9.015, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

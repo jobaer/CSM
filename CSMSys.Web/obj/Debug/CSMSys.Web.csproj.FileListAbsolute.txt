@@ -24,3 +24,42 @@ D:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\GenerateResource.write.1.tlog
 D:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\bn-BD\CSMSys.Web.resources.dll
 D:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.dll
 D:\CSMSys\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.pdb
+D:\Back up\24 jan\CSMSys\CSMSys.Web\bin\CSMSys.Web.dll
+D:\Back up\24 jan\CSMSys\CSMSys.Web\bin\CSMSys.Web.pdb
+D:\Back up\24 jan\CSMSys\CSMSys.Web\bin\bn-BD\CSMSys.Web.resources.dll
+D:\Back up\24 jan\CSMSys\CSMSys.Web\bin\CSMSys.Lib.dll
+D:\Back up\24 jan\CSMSys\CSMSys.Web\bin\CSMSys.Lib.pdb
+D:\Back up\24 jan\CSMSys\CSMSys.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Back up\24 jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.Pages.Strings.resources
+D:\Back up\24 jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.Pages.Strings.bn-BD.resources
+D:\Back up\24 jan\CSMSys\CSMSys.Web\obj\Debug\GenerateResource.read.1.tlog
+D:\Back up\24 jan\CSMSys\CSMSys.Web\obj\Debug\GenerateResource.write.1.tlog
+D:\Back up\24 jan\CSMSys\CSMSys.Web\obj\Debug\bn-BD\CSMSys.Web.resources.dll
+D:\Back up\24 jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.dll
+D:\Back up\24 jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.pdb
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\bin\CSMSys.Web.dll
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\bin\CSMSys.Web.pdb
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\bin\bn-BD\CSMSys.Web.resources.dll
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\bin\CSMSys.Lib.dll
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\bin\CSMSys.Lib.pdb
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.Pages.Strings.resources
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.Pages.Strings.bn-BD.resources
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\obj\Debug\GenerateResource.read.1.tlog
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\obj\Debug\GenerateResource.write.1.tlog
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\obj\Debug\bn-BD\CSMSys.Web.resources.dll
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.dll
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.pdb
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\bin\CSMSys.Web.dll
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\bin\CSMSys.Web.pdb
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\bin\bn-BD\CSMSys.Web.resources.dll
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\bin\CSMSys.Lib.dll
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\bin\CSMSys.Lib.pdb
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\obj\Debug\ResolveAssemblyReference.cache
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.Pages.Strings.resources
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.Pages.Strings.bn-BD.resources
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\obj\Debug\GenerateResource.read.1.tlog
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\obj\Debug\GenerateResource.write.1.tlog
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\obj\Debug\bn-BD\CSMSys.Web.resources.dll
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.dll
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Web\obj\Debug\CSMSys.Web.pdb

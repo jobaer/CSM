@@ -82,6 +82,18 @@ namespace CSMSys.Lib.Manager.SRV
 
         }
 
+        public Int32 GetRegistrationID()
+        {
+            try
+            {
+                return Convert.ToInt32(_RegistrationDAOLinq.All().ToList().Last().RegistrationID);
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+        }
+
         public bool DeleteRegistration(SRVRegistration serial)
         {
             try

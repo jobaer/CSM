@@ -4,3 +4,27 @@ E:\CSMSys\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.pdb
 E:\CSMSys\CSMSys\CSMSys.Lib\obj\Debug\ResolveAssemblyReference.cache
 E:\CSMSys\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.dll
 E:\CSMSys\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.pdb
+D:\CSMSys\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.dll.config
+D:\CSMSys\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.dll
+D:\CSMSys\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.pdb
+D:\CSMSys\CSMSys\CSMSys.Lib\obj\Debug\ResolveAssemblyReference.cache
+D:\CSMSys\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.dll
+D:\CSMSys\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.pdb
+D:\Back up\24 jan\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.dll.config
+D:\Back up\24 jan\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.dll
+D:\Back up\24 jan\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.pdb
+D:\Back up\24 jan\CSMSys\CSMSys.Lib\obj\Debug\ResolveAssemblyReference.cache
+D:\Back up\24 jan\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.dll
+D:\Back up\24 jan\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.pdb
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.dll.config
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.dll
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.pdb
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Lib\obj\Debug\ResolveAssemblyReference.cache
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.dll
+D:\Back up\Jobaer\26 jan\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.pdb
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.dll.config
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.dll
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Lib\bin\Debug\CSMSys.Lib.pdb
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Lib\obj\Debug\ResolveAssemblyReference.cache
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.dll
+D:\Back up\Jobaer\29jan\CSMSys\CSMSys.Lib\obj\Debug\CSMSys.Lib.pdb
